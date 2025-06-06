@@ -293,6 +293,48 @@ main {
   border-bottom: none;
 }
 
+/* About Thirukkural page styles */
+.about-content {
+  padding-top: calc(var(--navbar-height) + 30px);
+  padding-bottom: 48px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.about-section {
+  background: rgba(255,255,255,0.94);
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(45,58,74,0.07);
+  padding: 28px 22px 18px 22px;
+  margin-bottom: 28px;
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: var(--primary);
+}
+.about-section-title {
+  color: var(--accent);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  margin-top: 0;
+  letter-spacing: 0.01em;
+}
+
+@media (max-width: 690px) {
+  .about-content {
+    padding-top: calc(var(--navbar-height) + 13px);
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .about-section {
+    padding: 15px 8px 13px 8px;
+    font-size: 1.02rem;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  .about-section-title {
+    font-size: 1.08rem;
+  }
+}
 
 /* Responsive styles for home/athigaaram cards */
 @media (max-width: 690px) {
