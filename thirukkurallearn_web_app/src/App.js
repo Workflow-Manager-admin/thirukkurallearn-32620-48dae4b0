@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import NavBar from './components/NavBar';
+import Quiz from './pages/Quiz';
 
 // PUBLIC_INTERFACE
 function Home() {
@@ -31,17 +32,7 @@ function About() {
   );
 }
 
-// PUBLIC_INTERFACE
-function Quiz() {
-  return (
-    <div className="container" style={{ paddingTop: 120 }}>
-      <h1 className="title">Quiz</h1>
-      <div className="description">
-        Test your knowledge of Thirukkural! (Quiz interface coming soon)
-      </div>
-    </div>
-  );
-}
+
 
 /**
  * App root component
