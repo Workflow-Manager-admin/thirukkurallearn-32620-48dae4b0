@@ -334,20 +334,60 @@ main {
 
 /* About Thirukkural page styles */
 .about-content {
-  padding-top: calc(var(--navbar-height) + 30px);
+  padding-top: calc(var(--navbar-height) + 32px);
   padding-bottom: 48px;
-  max-width: 800px;
+  max-width: 870px;
   margin: 0 auto;
+}
+
+.about-section {
+  background: rgba(255,255,255,0.96);
+  border-radius: 16px;
+  box-shadow: 0 2px 13px rgba(45,58,74,0.08);
+  padding: 32px 25px 18px 27px;
+  margin-bottom: 26px;
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: var(--primary);
+}
+
+.about-section-title {
+  color: var(--accent);
+  font-size: 1.21rem;
+  font-weight: 650;
+  margin-bottom: 11px;
+  margin-top: 0;
+  letter-spacing: 0.01em;
+  font-family: 'Inter', 'Roboto', Arial, sans-serif;
+}
+
+@media (max-width: 690px) {
+  .about-content {
+    padding-top: calc(var(--navbar-height) + 15px);
+    padding-left: 3.5vw;
+    padding-right: 3.5vw;
+  }
+  .about-section {
+    padding: 17px 6px 11px 7px;
+    font-size: 1.04rem;
+    border-radius: 10px;
+    margin-bottom: 19px;
+  }
+  .about-section-title {
+    font-size: 1.07rem;
+  }
 }
 
 /* Quiz Page Styles */
 .quiz-question-box {
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(45,58,74,0.07);
-  padding: 24px 14px 18px 14px;
-  margin-bottom: 22px;
+  background: rgba(255,255,255,0.99);
+  border-radius: 12px;
+  box-shadow: 0 3px 15px 0 rgba(45,58,74,0.10);
+  padding: 30px 18px 21px 18px;
+  margin-bottom: 27px;
   margin-top: 0;
+  font-family: 'Inter', 'Roboto', Arial, sans-serif;
+  font-size: 1.1rem;
 }
 
 .quiz-options-list {
