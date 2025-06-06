@@ -503,17 +503,12 @@ main {
   .athigaaram-card {
     min-width: unset;
     min-height: 100px;
-    padding: 1.15rem 0.7rem;
-    font-size: 1.03rem;
+    padding: 1.18rem 0.72rem;
+    font-size: 1.04rem;
   }
   .athigaaram-kurals-section {
-    padding: 16px 3px 6px 3px;
+    padding: 14px 3px 8px 3px;
     border-radius: 10px;
   }
 }
 
-/* Accessibility/Contrast fixes */
-.nav-link:focus {
-  outline: 2px solid var(--accent);
-  outline-offset: 1px;
-}
