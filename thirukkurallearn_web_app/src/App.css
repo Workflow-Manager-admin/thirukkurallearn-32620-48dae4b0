@@ -12,12 +12,14 @@
   --thiru-bg-opacity: 0.0607;
 }
 
+/* Global, background, and typography */
 body {
   margin: 0;
   font-family: 'Inter', 'Roboto', 'Helvetica', 'Arial', sans-serif;
   background: var(--secondary);
   color: var(--primary);
   min-height: 100vh;
+  font-size: 1.07rem;
   background-image:
     linear-gradient(0deg, rgba(245,245,245, 0.91) 60%, rgba(245,245,245,0.98) 100%),
     var(--backdrop-thiruvalluvar-img);
@@ -27,14 +29,62 @@ body {
   background-attachment: fixed;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* Fallback in case asset isn't loaded */
+  letter-spacing: 0.01em;
 }
 
+/* App root */
 .app {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   isolation: isolate;
+  background: transparent;
+}
+
+/* Typographic components */
+.title {
+  font-size: 2.55rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: var(--primary);
+  margin-bottom: 0.2em;
+  margin-top: 0.6em;
+  font-family: 'Inter', 'Roboto', Arial, sans-serif;
+}
+.subtitle {
+  font-family: 'Inter', 'Roboto', Arial, sans-serif;
+  color: var(--accent);
+  font-weight: 500;
+  font-size: 1.17rem;
+  letter-spacing: 0.04em;
+  margin-bottom: 2px;
+}
+.description {
+  font-size: 1.12rem;
+  line-height: 1.54;
+  color: #373737;
+  max-width: 630px;
+  margin-bottom: 19px;
+  font-family: 'Inter', 'Roboto', Arial, sans-serif;
+}
+
+/* Container utilities */
+.container {
+  max-width: 920px;
+  margin: 0 auto;
+  width: 100%;
+  padding-left: 22px;
+  padding-right: 22px;
+  box-sizing: border-box;
+}
+.hero {
+  padding-top: calc(var(--navbar-height) + 56px);
+  padding-bottom: 64px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
   background: transparent;
 }
 
@@ -57,8 +107,6 @@ body {
   padding: 0;
   transition: background 0.26s;
 }
-
-/* Container for navbar content */
 .navbar-inner {
   display: flex;
   width: 100%;
@@ -68,7 +116,6 @@ body {
   margin: 0 auto;
   padding: var(--navbar-padding);
 }
-
 .logo {
   font-size: 1.2rem;
   font-weight: 700;
@@ -78,12 +125,10 @@ body {
   align-items: center;
   color: var(--secondary);
 }
-
 .logo-symbol {
   color: var(--accent);
   font-size: 1.4em;
 }
-
 /* Nav links style */
 .nav-links {
   list-style: none;
@@ -93,7 +138,6 @@ body {
   padding: 0;
   gap: 1.2rem;
 }
-
 .nav-link {
   text-decoration: none;
   color: var(--secondary);
@@ -108,7 +152,6 @@ body {
   background: var(--accent);
   color: var(--primary);
 }
-
 .navbar-toggle {
   /* Hamburger button, visible on mobile */
   display: none;
@@ -121,7 +164,6 @@ body {
   width: 44px;
   z-index: 1010;
 }
-
 .hamburger,
 .hamburger::before,
 .hamburger::after {
@@ -135,7 +177,6 @@ body {
   left: 8px;
   transition: all 0.26s;
 }
-
 .hamburger {
   top: 17px;
 }
@@ -145,8 +186,7 @@ body {
 .hamburger::after {
   top: 9px;
 }
-
-/* Responsive behavior: Collapse into hamburger menu on small screens */
+/* Responsive behavior for NavBar */
 @media (max-width: 700px) {
   .navbar-inner {
     padding: 0 0.5rem;
@@ -178,7 +218,6 @@ body {
     font-size: 1.06rem;
     color: var(--secondary);
   }
-
   .navbar-toggle {
     display: block;
     position: relative;
@@ -189,92 +228,7 @@ body {
   }
 }
 
-.container {
-  max-width: 920px;
-  margin: 0 auto;
-  width: 100%;
-  padding-left: 22px;
-  padding-right: 22px;
-  box-sizing: border-box;
-}
-
-.hero {
-  padding-top: calc(var(--navbar-height) + 56px);
-  padding-bottom: 64px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 24px;
-  background: transparent;
-}
-
-.subtitle {
-  color: var(--accent);
-  font-weight: 500;
-  font-size: 1.12rem;
-}
-
-.title {
-  font-size: 3.5rem;
-  font-weight: 600;
-  line-height: 1.2;
-  margin: 0;
-}
-
-.description {
-  font-size: 1.1rem;
-  line-height: 1.5;
-  color: #333;
-  max-width: 600px;
-  margin-bottom: 16px;
-}
-
-.btn {
-  background: var(--accent);
-  color: var(--primary);
-  border: none;
-  border-radius: 6px;
-  padding: 11px 25px;
-  font-size: 1.08rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.18s, color 0.17s;
-  box-shadow: 0 2px 11px 0 rgba(193,154,107,0.09);
-  outline: none;
-  letter-spacing: 0.02em;
-}
-.btn:hover,
-.btn:active {
-  background: var(--primary);
-  color: var(--secondary);
-  outline: 1.5px solid var(--accent);
-}
-.btn:focus {
-  outline: 2.1px solid var(--accent);
-  outline-offset: 2.5px;
-}
-.btn-large {
-  padding: 14px 29px;
-  font-size: 1.17rem;
-}
-
-/* Accessibility/Contrast fixes */
-.nav-link:focus {
-  outline: 2px solid var(--accent);
-  outline-offset: 2px;
-}
-
-/* Main content area offset to not hide under NavBar */
-main {
-  padding-top: var(--navbar-height);
-  flex: 1 0 auto;
-  width: 100%;
-  background: transparent;
-  min-height: 400px;
-}
-
-/* AthigaaramCard styles */
+/* AthigaaramCard and grid styles */
 .athigaaram-card {
   transition: box-shadow 0.18s, border 0.26s, background 0.18s;
   position: relative;
@@ -319,8 +273,20 @@ main {
   align-items: stretch;
   justify-content: center;
 }
+@media (max-width: 690px) {
+  .athigaarams-grid {
+    grid-template-columns: 1fr;
+    gap: 13px;
+  }
+  .athigaaram-card {
+    min-width: unset;
+    min-height: 100px;
+    padding: 1.18rem 0.72rem;
+    font-size: 1.04rem;
+  }
+}
 
-/* Kural list visually separated */
+/* Kural section and list */
 .athigaaram-kurals-section {
   margin-top: 11px;
   background: rgba(245,245,245,0.98);
@@ -345,15 +311,20 @@ main {
 .athigaaram-kurals-section li:last-child {
   border-bottom: none;
 }
+@media (max-width: 690px) {
+  .athigaaram-kurals-section {
+    padding: 14px 3px 8px 3px;
+    border-radius: 10px;
+  }
+}
 
-/* About Thirukkural page styles */
+/* About page and sections */
 .about-content {
   padding-top: calc(var(--navbar-height) + 32px);
   padding-bottom: 48px;
   max-width: 870px;
   margin: 0 auto;
 }
-
 .about-section {
   background: rgba(255,255,255,0.96);
   border-radius: 16px;
@@ -364,7 +335,6 @@ main {
   line-height: 1.7;
   color: var(--primary);
 }
-
 .about-section-title {
   color: var(--accent);
   font-size: 1.21rem;
@@ -374,7 +344,6 @@ main {
   letter-spacing: 0.01em;
   font-family: 'Inter', 'Roboto', Arial, sans-serif;
 }
-
 @media (max-width: 690px) {
   .about-content {
     padding-top: calc(var(--navbar-height) + 15px);
@@ -403,13 +372,11 @@ main {
   font-family: 'Inter', 'Roboto', Arial, sans-serif;
   font-size: 1.1rem;
 }
-
 .quiz-options-list {
   display: flex;
   flex-direction: column;
   gap: 11px;
 }
-
 .quiz-option-btn {
   display: flex;
   align-items: center;
@@ -429,23 +396,23 @@ main {
 }
 .quiz-option-btn.selected {
   border: 2px solid var(--accent);
-  background: rgba(193,154,107,0.14);
+  background: rgba(193,154,107,0.13);
 }
 .quiz-option-btn:disabled {
   cursor: not-allowed;
   filter: grayscale(0.13);
-  opacity: 0.96;
+  opacity: 0.93;
 }
 .quiz-option-btn:focus {
   outline: 2.2px solid var(--accent);
 }
-
 .quiz-feedback {
   margin-top: 15px;
   border-radius: 6px;
   padding: 12px 10px;
   font-size: 1rem;
   font-weight: 480;
+  background: #f7f3ed;
 }
 
 @media (max-width: 600px) {
@@ -458,57 +425,47 @@ main {
     gap: 7px;
   }
 }
-.about-section {
-  background: rgba(255,255,255,0.94);
-  border-radius: 14px;
-  box-shadow: 0 2px 12px rgba(45,58,74,0.07);
-  padding: 28px 22px 18px 22px;
-  margin-bottom: 28px;
-  font-size: 1.15rem;
-  line-height: 1.7;
+
+/* Button styles */
+.btn {
+  background: var(--accent);
   color: var(--primary);
-}
-.about-section-title {
-  color: var(--accent);
-  font-size: 1.25rem;
+  border: none;
+  border-radius: 6px;
+  padding: 11px 25px;
+  font-size: 1.08rem;
   font-weight: 600;
-  margin-bottom: 12px;
-  margin-top: 0;
-  letter-spacing: 0.01em;
+  cursor: pointer;
+  transition: background 0.18s, color 0.17s;
+  box-shadow: 0 2px 11px 0 rgba(193,154,107,0.09);
+  outline: none;
+  letter-spacing: 0.02em;
+}
+.btn:hover,
+.btn:active {
+  background: var(--primary);
+  color: var(--secondary);
+  outline: 1.5px solid var(--accent);
+}
+.btn:focus {
+  outline: 2.1px solid var(--accent);
+  outline-offset: 2.5px;
+}
+.btn-large {
+  padding: 14px 29px;
+  font-size: 1.17rem;
 }
 
+/* Misc responsive tweaks */
 @media (max-width: 690px) {
-  .about-content {
-    padding-top: calc(var(--navbar-height) + 13px);
-    padding-left: 5px;
-    padding-right: 5px;
-  }
-  .about-section {
-    padding: 15px 8px 13px 8px;
-    font-size: 1.02rem;
-    border-radius: 8px;
-    margin-bottom: 20px;
-  }
-  .about-section-title {
-    font-size: 1.08rem;
+  .container {
+    padding-left: 6px;
+    padding-right: 6px;
   }
 }
 
-/* Responsive styles for home/athigaaram cards */
-@media (max-width: 690px) {
-  .athigaarams-grid {
-    grid-template-columns: 1fr;
-    gap: 13px;
-  }
-  .athigaaram-card {
-    min-width: unset;
-    min-height: 100px;
-    padding: 1.18rem 0.72rem;
-    font-size: 1.04rem;
-  }
-  .athigaaram-kurals-section {
-    padding: 14px 3px 8px 3px;
-    border-radius: 10px;
-  }
+/* Accessibility/Contrast fixes */
+.nav-link:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }
-
