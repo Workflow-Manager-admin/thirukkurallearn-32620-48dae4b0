@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
+import NavBar from './components/NavBar';
 
 // PUBLIC_INTERFACE
 function Home() {
@@ -42,23 +43,14 @@ function Quiz() {
   );
 }
 
-// PUBLIC_INTERFACE
+/**
+ * App root component
+ * Renders the persistent NavBar and app routes.
+ */
 function App() {
   return (
     <div className="app">
-      {/* Placeholder NavBar, will be refactored to use NavLink and navigation soon */}
-      <nav className="navbar">
-        <div className="container">
-          <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
-            <div className="logo">
-              <span className="logo-symbol">*</span> ThirukkuralLearn
-            </div>
-            {/* NavBar navigation links coming soon */}
-            <span style={{ color: 'var(--text-secondary)' }}>NavBar Placeholder</span>
-          </div>
-        </div>
-      </nav>
-
+      <NavBar />
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
