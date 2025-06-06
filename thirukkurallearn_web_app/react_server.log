@@ -26,3 +26,14 @@ ERROR in ./src/index.js 10:0-49
 Module not found: Error: Can't resolve 'react-router-dom' in '/home/kavia/workspace/code-generation/thirukkurallearn-32620-48dae4b0/thirukkurallearn_web_app/src'
 
 webpack compiled with 1 error
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve 'react-router-dom' in '/home/kavia/workspace/code-generation/thirukkurallearn-32620-48dae4b0/thirukkurallearn_web_app/src'
+ERROR in ./src/App.js 6:0-49
+Module not found: Error: Can't resolve 'react-router-dom' in '/home/kavia/workspace/code-generation/thirukkurallearn-32620-48dae4b0/thirukkurallearn_web_app/src'
+
+ERROR in ./src/index.js 10:0-49
+Module not found: Error: Can't resolve 'react-router-dom' in '/home/kavia/workspace/code-generation/thirukkurallearn-32620-48dae4b0/thirukkurallearn_web_app/src'
+
+webpack compiled with 2 errors
