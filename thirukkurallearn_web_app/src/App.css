@@ -52,9 +52,10 @@ body {
   left: 0;
   top: 0;
   z-index: 1000;
-  border-bottom: 1px solid var(--border-color);
-  box-shadow: 0 1px 8px 0 rgba(42,42,42,0.04);
+  border-bottom: 1.5px solid var(--border-color);
+  box-shadow: 0 1.5px 11px 0 rgba(42,42,42,0.06);
   padding: 0;
+  transition: background 0.26s;
 }
 
 /* Container for navbar content */
@@ -189,10 +190,11 @@ body {
 }
 
 .container {
-  max-width: 900px;
+  max-width: 920px;
   margin: 0 auto;
-  padding: 0 24px;
   width: 100%;
+  padding-left: 22px;
+  padding-right: 22px;
   box-sizing: border-box;
 }
 
